@@ -1,13 +1,28 @@
 import Link from "next/link";
 import TopNav from "./components/TopNav";
-import AboutMe from "./about-me/page";
-import Projects from "./projects/page";
 import Contact from "./components/Contact";
+import Projects from "./components/Projects";
 
 export default function Home() {
     return (
         <>
-            <div></div>
+            <div className="hero">
+                <div className="hero-content text-center">
+                    <div className="max-w-lg">
+                        <img
+                            src="/about-me-main.jpg"
+                            className="rounded-lg shadow-2x1 py-10"
+                        />
+                        <h1 className="text-5xl font-bold">Hello there!</h1>
+                        <p className="py-6">
+                            Hello! My name is Jacob Hunsaker and I'm a Full
+                            Stack Developer.
+                        </p>
+                        <Projects />
+                    </div>
+                </div>
+            </div>
+            <Contact />
         </>
     );
 }

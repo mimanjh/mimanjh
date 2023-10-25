@@ -11,12 +11,6 @@ const navItems = {
     "/": {
         name: "home",
     },
-    "/about-me": {
-        name: "about-me",
-    },
-    "/projects": {
-        name: "projects",
-    },
 };
 
 export default function TopNav() {
