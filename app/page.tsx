@@ -7,7 +7,7 @@ export default function Home() {
     return (
         <>
             <div className="hero">
-                <div className="hero-content text-center">
+                <div className="hero-content text-center pt-0">
                     <div className="max-w-lg">
                         <img
                             src="/about-me-main.jpg"

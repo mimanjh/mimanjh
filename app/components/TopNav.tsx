@@ -15,12 +15,8 @@ const navItems = {
 
 export default function TopNav() {
     let pathname = usePathname() || "/";
-    if (pathname.includes("/about-me/")) {
-        pathname = "/about-me";
-    }
-
     return (
-        <aside className="-ml-[8px] mb-16 tracking-tight">
+        <aside className="ml-14 mb-5 tracking-tight">
             <div className="lg:sticky lg:top-20">
                 <LayoutGroup>
                     <nav
