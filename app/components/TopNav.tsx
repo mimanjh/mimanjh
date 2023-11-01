@@ -10,6 +10,11 @@ import { LayoutGroup, motion } from "framer-motion";
 const navItems = {
     "/": {
         name: "home",
+        external: false,
+    },
+    "https://github.com/mimanjh/robofriends": {
+        name: "robofriends",
+        external: true,
     },
 };
 
@@ -25,7 +30,24 @@ export default function TopNav() {
                     >
                         <div className="flex flex-row space-x-0 pr-10">
                             {Object.entries(navItems).map(
-                                ([path, { name }]) => {
+                                ([path, { name, external }]) => {
+                                    if (external) {
+                                        return (
+                                            <a
+                                                key={path}
+                                                href={path}
+                                                className={clsx(
+                                                    "transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle"
+                                                )}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                            >
+                                                <span className="relative py-1 px-2">
+                                                    {name}
+                                                </span>
+                                            </a>
+                                        );
+                                    }
                                     const isActive = path === pathname;
                                     return (
                                         <Link
