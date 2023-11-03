@@ -9,6 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import Image from "next/image";
 
 interface CarouselProps {
     items: {
@@ -34,7 +35,7 @@ const Carousel = ({ items }: CarouselProps) => {
             {items.map((item, index) => (
                 <SwiperSlide key={index}>
                     <a href={item.url} target="_blank">
-                        <img src={item.thumbnail} alt={item.title} />
+                        <Image src={item.thumbnail} alt={item.title} />
                     </a>
                 </SwiperSlide>
             ))}
