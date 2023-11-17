@@ -35,7 +35,11 @@ const Carousel = ({ items }: CarouselProps) => {
             {items.map((item, index) => (
                 <SwiperSlide key={index}>
                     <a href={item.url} target="_blank">
-                        <Image src={item.thumbnail} alt={item.title} />
+                        <Image
+                            fill={true}
+                            src={item.thumbnail}
+                            alt={item.title}
+                        />
                     </a>
                 </SwiperSlide>
             ))}

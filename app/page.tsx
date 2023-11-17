@@ -7,9 +7,11 @@ export default function Home() {
         <>
             <div className="hero">
                 <div className="hero-content text-center pt-0">
-                    <div className="max-w-lg">
+                    <div className="relative">
                         <Image
                             src="/about-me-main.jpg"
+                            fill={true}
+                            objectFit="cover"
                             alt="Picture of the author"
                             className="rounded-lg shadow-2x1 py-10"
                         />

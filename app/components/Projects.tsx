@@ -12,14 +12,14 @@ const Projects = () => {
     const getCarouselItems = () => {
         return [
             {
+                url: "https://github.com/mimanjh/leetcode",
+                thumbnail: "/thumbnail-leetcode.png",
+                title: "Mimanjh",
+            },
+            {
                 url: "https://github.com/mimanjh/robofriends",
                 thumbnail: "/thumbnail-robofriends.png",
                 title: "Robofriends",
-            },
-            {
-                url: "https://github.com/mimanjh",
-                thumbnail: "/about-me-main.jpg",
-                title: "Mimanjh",
             },
             {
                 url: "https://github.com/mimanjh",

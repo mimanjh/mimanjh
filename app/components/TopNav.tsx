@@ -12,6 +12,10 @@ const navItems = {
         name: "home",
         external: false,
     },
+    "https://github.com/mimanjh/leetcode": {
+        name: "leetcode",
+        external: true,
+    },
     "https://github.com/mimanjh/robofriends": {
         name: "robofriends",
         external: true,
