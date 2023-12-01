@@ -15,7 +15,7 @@ const Projects = () => {
                 The following carousel will provide a snapshot of the projects I
                 have worked on.
             </p>
-            <div className="max-w-fit">
+            <div className="max-w-xl">
                 <Carousel />
             </div>
         </section>

@@ -59,7 +59,8 @@ const Carousel = () => {
                     shadowOffset: 20,
                     shadowScale: 0.94,
                 }}
-                className="max-w-fit"
+                className="w-auto"
+                objectFit="contain"
             >
                 {items.map((item, index) => (
                     <SwiperSlide key={index}>
