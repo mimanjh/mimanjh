@@ -9,37 +9,15 @@ export const metadata: Metadata = {
 };
 
 const Projects = () => {
-    const getCarouselItems = () => {
-        return [
-            {
-                url: "https://github.com/mimanjh/robofriends",
-                thumbnail: "/thumbnail-robofriends.png",
-                title: "Robofriends",
-            },
-            {
-                url: "https://github.com/mimanjh",
-                thumbnail: "/about-me-main.jpg",
-                title: "Mimanjh",
-            },
-            {
-                url: "https://github.com/mimanjh",
-                thumbnail: "/about-me-main.jpg",
-                title: "Mimanjh",
-            },
-            {
-                url: "https://github.com/mimanjh",
-                thumbnail: "/about-me-main.jpg",
-                title: "Mimanjh",
-            },
-        ];
-    };
     return (
         <section id="projects">
             <p className="py-6">
                 The following carousel will provide a snapshot of the projects I
                 have worked on.
             </p>
-            <Carousel items={getCarouselItems()} />
+            <div className="max-w-xl">
+                <Carousel />
+            </div>
         </section>
     );
 };
