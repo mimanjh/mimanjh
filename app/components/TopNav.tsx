@@ -12,11 +12,11 @@ const navItems = {
         name: "home",
         external: false,
     },
-    "https://github.com/mimanjh/leetcode": {
+    "https://mimanjh-leetcode.vercel.app/": {
         name: "leetcode",
         external: true,
     },
-    "https://github.com/mimanjh/robofriends": {
+    "https://mimanjh.github.io/robofriends/": {
         name: "robofriends",
         external: true,
     },
