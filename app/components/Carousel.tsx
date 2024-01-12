@@ -1,11 +1,5 @@
 import React from "react";
-import {
-    Navigation,
-    Pagination,
-    EffectCoverflow,
-    EffectCube,
-    Autoplay,
-} from "swiper/modules";
+import { Pagination, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -16,6 +10,7 @@ import roboFriendsThumbnail from "../../public/thumbnail-robofriends.png";
 import aboutMeThumbnail from "../../public/about-me-main.jpg";
 
 interface CarouselProps {
+    id: number;
     url: string;
     thumbnail: StaticImageData;
     title: string;
@@ -24,59 +19,46 @@ interface CarouselProps {
 const Carousel = () => {
     const items: CarouselProps[] = [
         {
-            url: "https://github.com/mimanjh/leetcode",
+            id: 1,
+            url: "https://mimanjh-leetcode.vercel.app/",
             thumbnail: leetCodeThumbnail,
             title: "Mimanjh",
         },
         {
-            url: "https://github.com/mimanjh/robofriends",
+            id: 2,
+            url: "https://mimanjh.github.io/robofriends/",
             thumbnail: roboFriendsThumbnail,
             title: "Robofriends",
         },
-        {
-            url: "https://github.com/mimanjh",
-            thumbnail: aboutMeThumbnail,
-            title: "Mimanjh",
-        },
-        {
-            url: "https://github.com/mimanjh",
-            thumbnail: aboutMeThumbnail,
-            title: "Mimanjh",
-        },
     ];
+
+    const handleImageClick = (url: string) => {
+        window.open(url, "_blank");
+    };
 
     return (
         <>
             <Swiper
-                modules={[Pagination, EffectCube]}
+                modules={[Pagination, EffectFade]}
                 grabCursor={true}
-                pagination={{ clickable: true, dynamicBullets: true }}
-                rewind={true}
-                effect={"cube"}
-                cubeEffect={{
-                    shadow: true,
-                    slideShadows: true,
-                    shadowOffset: 20,
-                    shadowScale: 0.94,
+                pagination={{ clickable: false, dynamicBullets: true }}
+                effect={"fade"}
+                centeredSlides={true}
+                fadeEffect={{
+                    crossFade: true,
                 }}
                 className="w-auto"
+                style={{ maxHeight: "50vh" }}
             >
-                {items.map((item, index) => (
-                    <SwiperSlide key={index}>
-                        <a
-                            href={item.url}
-                            target="_blank"
-                            className="cursor-grab"
-                        >
-                            <Image
-                                src={item.thumbnail}
-                                alt={item.title}
-                                style={{
-                                    maxWidth: "100%",
-                                    height: "auto",
-                                }}
-                            />
-                        </a>
+                {items.map((item) => (
+                    <SwiperSlide key={item.id}>
+                        <Image
+                            src={item.thumbnail}
+                            alt={item.title}
+                            // onClick={() => {
+                            //     handleImageClick(item.url);
+                            // }}
+                        />
                     </SwiperSlide>
                 ))}
             </Swiper>
