@@ -20,6 +20,10 @@ const navItems = {
         name: "robofriends",
         external: true,
     },
+    "https://github.com/mimanjh/wow-guild-monitor": {
+        name: "wow-guild-monitor",
+        external: true,
+    },
 };
 
 export default function TopNav() {
