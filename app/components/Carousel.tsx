@@ -8,6 +8,7 @@ import Image, { StaticImageData } from "next/image";
 import leetCodeThumbnail from "../../public/thumbnail-leetcode.png";
 import roboFriendsThumbnail from "../../public/thumbnail-robofriends.png";
 import aboutMeThumbnail from "../../public/about-me-main.jpg";
+import wowGuildMonitorThumbnail from "../../public/thumbnail-wowguildmonitor.png";
 
 interface CarouselProps {
     id: number;
@@ -29,6 +30,12 @@ const Carousel = () => {
             url: "https://mimanjh.github.io/robofriends/",
             thumbnail: roboFriendsThumbnail,
             title: "Robofriends",
+        },
+        {
+            id: 3,
+            url: "https://github.com/mimanjh/wow-guild-monitor",
+            thumbnail: wowGuildMonitorThumbnail,
+            title: "WowGuildMonitor",
         },
     ];
 
