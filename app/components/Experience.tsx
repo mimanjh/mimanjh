@@ -13,11 +13,9 @@ const roles: Role[] = [
         location: "Austin, TX",
         dates: "Jun 2022 – May 2026",
         bullets: [
-            "Re-architected a content optimization platform from .NET MVC to Spring Boot + Angular, delivering ~$3M/month in revenue impact and significant gains in performance and scalability.",
-            "Built and shipped an AI-driven internal chatbot (TypeScript-React, FastAPI, Azure, Databricks) ahead of schedule; now serves hundreds of internal users across departments.",
-            "Led the rollout of GitHub Actions and ArgoCD CI/CD pipelines with Helm-based GitOps deployments, reducing failed deploys via automated rollbacks and health checks.",
-            "Improved backend performance via Redis caching, Zustand-based state management, and SQL views/stored procedures in SSMS — accelerating query times and cutting compute costs.",
-            "Embedded Mockito, Zest, and SonarQube into the CI/CD pipeline, measurably reducing production bugs and code smells.",
+            "Re-architected a content optimization platform that predicts future vehicle trims and prices — generated roughly $3M/month in revenue impact.",
+            "Designed and shipped an AI-powered internal assistant, delivered ahead of schedule and now used by hundreds of employees across departments.",
+            "Led an effort to modernize how the team releases software, helping projects ship updates faster and with fewer incidents.",
         ],
     },
     {
@@ -26,10 +24,8 @@ const roles: Role[] = [
         location: "Provo, UT",
         dates: "Sep 2020 – Apr 2022",
         bullets: [
-            "Built and maintained multiple high-impact web applications on .NET Entity Core + Vue.js to support Life Sciences operations.",
-            "Led three concurrent development projects with a flawless deployment record — zero major incidents through rigorous testing and performance tuning.",
-            "Built a scholarship application platform that streamlined the financial aid process for 200+ students each semester.",
-            "Worked directly with executive stakeholders to translate strategic goals into production web applications.",
+            "Built a scholarship application platform that streamlined the financial aid process for 200+ Life Sciences students each semester.",
+            "Delivered and maintained internal web applications used by faculty and staff across the Life Sciences department.",
         ],
     },
     {
@@ -38,9 +34,9 @@ const roles: Role[] = [
         location: "Seoul, South Korea",
         dates: "May 2021 – Aug 2021",
         bullets: [
-            "Independently shipped two new Flutter apps for teachers to the Google Play Store and Apple App Store, expanding the company's portfolio.",
-            "Migrated an outdated PHP application to Flutter, delivering a more modern, performant user experience.",
-            'Wrote an internal "How-to-Flutter" guide in Korean to help onboard future developers.',
+            "Shipped two new mobile apps for teachers to the Google Play Store and Apple App Store, expanding the company's product lineup.",
+            "Rebuilt an outdated company app from the ground up, giving users a faster, more modern experience.",
+            "Wrote an internal onboarding guide in Korean to help future developers ramp up faster.",
         ],
     },
 ];

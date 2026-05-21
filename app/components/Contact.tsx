@@ -1,4 +1,4 @@
-import { FiGithub, FiLinkedin, FiMail, FiEdit3 } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail, FiDownload } from "react-icons/fi";
 import CopyEmailToClipboard from "./CopyEmailToClipboard";
 
 const socials = [
@@ -30,6 +30,14 @@ const Contact = () => {
                 Always happy to chat about engineering, side projects, or
                 anything in between.
             </p>
+            <a
+                href="/resume.pdf"
+                download="Jacob_Hunsaker_Resume.pdf"
+                className="btn btn-primary mb-8"
+            >
+                <FiDownload size={18} />
+                Download Resume
+            </a>
             <div className="flex justify-center gap-3 flex-wrap items-center">
                 {socials.map(({ label, href, Icon }) => (
                     <a

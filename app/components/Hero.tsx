@@ -1,5 +1,11 @@
 import Link from "next/link";
-import { FiGithub, FiLinkedin, FiMail, FiMapPin } from "react-icons/fi";
+import {
+    FiDownload,
+    FiGithub,
+    FiLinkedin,
+    FiMail,
+    FiMapPin,
+} from "react-icons/fi";
 import ProfileImage from "./ProfileImage";
 
 const Hero = () => {
@@ -29,6 +35,14 @@ const Hero = () => {
                     <Link href="#contact" className="btn btn-outline">
                         Get in touch
                     </Link>
+                    <a
+                        href="/resume.pdf"
+                        download="Jacob_Hunsaker_Resume.pdf"
+                        className="btn btn-outline"
+                    >
+                        <FiDownload size={16} />
+                        Resume
+                    </a>
                     <div className="flex gap-1 ml-1">
                         <a
                             href="https://github.com/mimanjh"
