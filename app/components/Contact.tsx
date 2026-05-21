@@ -13,11 +13,6 @@ const socials = [
         Icon: FiLinkedin,
     },
     {
-        label: "Dev.to",
-        href: "https://dev.to/mimanjh",
-        Icon: FiEdit3,
-    },
-    {
         label: "Email",
         href: "mailto:jacobjhunsaker@gmail.com",
         Icon: FiMail,

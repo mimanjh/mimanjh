@@ -6,6 +6,41 @@ import wowLogAnalyzerThumbnail from "../../public/thumbnail-wowloganalyzer.png";
 
 const projects: Project[] = [
     {
+        title: "UX Insight Generator",
+        description:
+            "Turns raw user research notes into structured UX insights, with patterns and themes surfaced automatically.",
+        thumbnail: uxInsightGeneratorThumbnail,
+        tech: [
+            "React",
+            "TypeScript",
+            "FastAPI",
+            "Python",
+            "Anthropic",
+            "RAG",
+            "Prompt Engineering",
+            "Redis",
+            "Fly.io",
+        ],
+        liveUrl: "https://ux-insight-generator.fly.dev/",
+        githubUrl: "https://github.com/mimanjh/ux-insight-generator",
+    },
+    {
+        title: "WoW Log Analyzer",
+        description:
+            "Parses World of Warcraft combat logs to surface performance metrics and improvement opportunities for raiders.",
+        thumbnail: wowLogAnalyzerThumbnail,
+        tech: [
+            "React",
+            "TypeScript",
+            "Go",
+            "Anthropic",
+            "Redis",
+            "Fly.io",
+        ],
+        liveUrl: "https://wow-log-analyzer.fly.dev/",
+        githubUrl: "https://github.com/mimanjh/wow-log-analyzer",
+    },
+    {
         title: "LeetCode Solutions",
         description:
             "A growing collection of LeetCode solutions in JavaScript and Python, organized by problem and difficulty.",
@@ -21,22 +56,6 @@ const projects: Project[] = [
         thumbnail: wowGuildMonitorThumbnail,
         tech: ["Node.js", "Blizzard API", "React"],
         githubUrl: "https://github.com/mimanjh/wow-guild-monitor",
-    },
-    {
-        title: "UX Insight Generator",
-        description:
-            "Turns raw user research notes into structured UX insights, with patterns and themes surfaced automatically.",
-        thumbnail: uxInsightGeneratorThumbnail,
-        tech: ["TypeScript", "OpenAI", "Node.js"],
-        githubUrl: "https://github.com/mimanjh/ux-insight-generator",
-    },
-    {
-        title: "WoW Log Analyzer",
-        description:
-            "Parses World of Warcraft combat logs to surface performance metrics and improvement opportunities for raiders.",
-        thumbnail: wowLogAnalyzerThumbnail,
-        tech: ["Python", "Data Analysis"],
-        githubUrl: "https://github.com/mimanjh/wow-log-analyzer",
     },
 ];
 

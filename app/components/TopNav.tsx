@@ -10,6 +10,7 @@ import { useEffect, useState } from "react";
 const sections = [
     { id: "home", label: "home" },
     { id: "about", label: "about" },
+    { id: "experience", label: "experience" },
     { id: "skills", label: "skills" },
     { id: "projects", label: "projects" },
     { id: "contact", label: "contact" },
@@ -24,12 +25,11 @@ export default function TopNav() {
                 const visible = entries
                     .filter((e) => e.isIntersecting)
                     .sort(
-                        (a, b) =>
-                            b.intersectionRatio - a.intersectionRatio
+                        (a, b) => b.intersectionRatio - a.intersectionRatio,
                     )[0];
                 if (visible) setActive(visible.target.id);
             },
-            { rootMargin: "-40% 0px -50% 0px", threshold: [0, 0.25, 0.5, 1] }
+            { rootMargin: "-40% 0px -50% 0px", threshold: [0, 0.25, 0.5, 1] },
         );
         sections.forEach(({ id }) => {
             const el = document.getElementById(id);
@@ -45,11 +45,8 @@ export default function TopNav() {
                     className="flex flex-row items-center justify-between px-4 py-3 max-w-7xl mx-auto"
                     id="nav"
                 >
-                    <Link
-                        href="#home"
-                        className="font-semibold tracking-tight"
-                    >
-                        jacob hunsaker
+                    <Link href="#home" className="font-semibold tracking-tight">
+                        Jacob Hunsaker
                     </Link>
                     <div className="flex flex-row gap-1">
                         {sections
@@ -65,7 +62,7 @@ export default function TopNav() {
                                             {
                                                 "text-base-content/60":
                                                     !isActive,
-                                            }
+                                            },
                                         )}
                                     >
                                         <span className="relative py-1 px-2">
