@@ -31,9 +31,9 @@ const About = () => {
                 </p>
                 <p>
                     Outside of work I tinker with side projects (a few are
-                    below), play a lot of World of Warcraft, and grind LeetCode
-                    problems to keep my fundamentals sharp. I&apos;m happiest
-                    shipping things that other people actually use.
+                    below), play a lot of World of Warcraft (guild raid lead of
+                    30 people) I&apos;m happiest working on problems to solve
+                    and thinking of how it can help the end users.
                 </p>
             </div>
         </section>

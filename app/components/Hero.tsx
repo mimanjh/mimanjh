@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {
-    FiDownload,
+    FiFileText,
     FiGithub,
     FiLinkedin,
     FiMail,
@@ -37,10 +37,11 @@ const Hero = () => {
                     </Link>
                     <a
                         href="/resume.pdf"
-                        download="Jacob_Hunsaker_Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="btn btn-outline"
                     >
-                        <FiDownload size={16} />
+                        <FiFileText size={16} />
                         Resume
                     </a>
                     <div className="flex gap-1 ml-1">
