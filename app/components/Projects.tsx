@@ -1,12 +1,6 @@
 "use client";
-import { Metadata } from "next";
 import React from "react";
 import Carousel from "./Carousel";
-
-export const metadata: Metadata = {
-    title: "Projects",
-    description: "Full Stack Developer",
-};
 
 const Projects = () => {
     return (

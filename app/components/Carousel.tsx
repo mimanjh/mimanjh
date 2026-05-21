@@ -7,10 +7,9 @@ import "swiper/css/pagination";
 import Image, { StaticImageData } from "next/image";
 import leetCodeThumbnail from "../../public/thumbnail-leetcode.png";
 import roboFriendsThumbnail from "../../public/thumbnail-robofriends.png";
-import aboutMeThumbnail from "../../public/about-me-main.jpg";
 import wowGuildMonitorThumbnail from "../../public/thumbnail-wowguildmonitor.png";
 
-interface CarouselProps {
+interface CarouselItem {
     id: number;
     url: string;
     thumbnail: StaticImageData;
@@ -18,12 +17,12 @@ interface CarouselProps {
 }
 
 const Carousel = () => {
-    const items: CarouselProps[] = [
+    const items: CarouselItem[] = [
         {
             id: 1,
             url: "https://mimanjh-leetcode.vercel.app/",
             thumbnail: leetCodeThumbnail,
-            title: "Mimanjh",
+            title: "Mimanjh Leetcode",
         },
         {
             id: 2,
@@ -39,37 +38,32 @@ const Carousel = () => {
         },
     ];
 
-    const handleImageClick = (url: string) => {
-        window.open(url, "_blank");
-    };
-
     return (
-        <>
-            <Swiper
-                modules={[Pagination, EffectFade]}
-                grabCursor={true}
-                pagination={{ clickable: false, dynamicBullets: true }}
-                effect={"fade"}
-                centeredSlides={true}
-                fadeEffect={{
-                    crossFade: true,
-                }}
-                className="w-auto"
-                style={{ maxHeight: "50vh" }}
-            >
-                {items.map((item) => (
-                    <SwiperSlide key={item.id}>
-                        <Image
-                            src={item.thumbnail}
-                            alt={item.title}
-                            // onClick={() => {
-                            //     handleImageClick(item.url);
-                            // }}
-                        />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </>
+        <Swiper
+            modules={[Pagination, EffectFade]}
+            grabCursor={true}
+            pagination={{ clickable: false, dynamicBullets: true }}
+            effect={"fade"}
+            centeredSlides={true}
+            fadeEffect={{
+                crossFade: true,
+            }}
+            className="w-auto"
+            style={{ maxHeight: "50vh" }}
+        >
+            {items.map((item) => (
+                <SwiperSlide key={item.id}>
+                    <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Open ${item.title}`}
+                    >
+                        <Image src={item.thumbnail} alt={item.title} />
+                    </a>
+                </SwiperSlide>
+            ))}
+        </Swiper>
     );
 };
 

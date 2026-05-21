@@ -2,15 +2,25 @@
 import React from "react";
 import Alert from "./Alert";
 
+const EMAIL = "jacobjhunsaker@gmail.com";
+
 const CopyEmailToClipboard = () => {
     const [isCopied, setIsCopied] = React.useState(false);
-    const copyEmailToClipboard = () => {
-        const textarea = document.createElement("textarea");
-        textarea.value = "jacob.hunasker96@gmail.com";
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textarea);
+
+    const copyEmailToClipboard = async () => {
+        try {
+            await navigator.clipboard.writeText(EMAIL);
+        } catch {
+            const textarea = document.createElement("textarea");
+            textarea.value = EMAIL;
+            textarea.setAttribute("readonly", "");
+            textarea.style.position = "absolute";
+            textarea.style.left = "-9999px";
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+        }
 
         setIsCopied(true);
         setTimeout(() => {

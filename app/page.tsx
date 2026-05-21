@@ -10,12 +10,10 @@ export default function Home() {
                 <div className="hero-content text-center pt-0 flex flex-col items-center">
                     <Image
                         src={profile}
-                        style={{
-                            maxWidth: "50%",
-                            height: "auto",
-                        }}
                         alt="Picture of the author"
-                        className="rounded-lg shadow-2x1 py-10"
+                        sizes="(max-width: 768px) 75vw, 50vw"
+                        className="w-1/2 h-auto rounded-lg shadow-2xl py-10"
+                        priority
                     />
                     <h1 className="text-5xl font-bold">Hello there!</h1>
                     <p className="py-6">
