@@ -9,9 +9,9 @@ const About = () => {
                     recently I spent four years at General Motors building
                     internal platforms used by hundreds of people across the
                     company; re-architecting a content optimization platform
-                    from .NET MVC to Spring Boot + Angular and shipping an
-                    AI-driven internal chatbot on FastAPI, React, Azure, and
-                    Databricks.
+                    from .NET MVC to Spring Boot + Angular TypeScript and
+                    shipping an AI-driven internal chatbot on FastAPI, React,
+                    Azure, and Databricks.
                 </p>
                 <p>
                     Before GM I built full-stack web applications for BYU&apos;s
@@ -31,9 +31,9 @@ const About = () => {
                 </p>
                 <p>
                     Outside of work I tinker with side projects (a few are
-                    below), play a lot of World of Warcraft (guild raid lead of
-                    30 people) I&apos;m happiest working on problems to solve
-                    and thinking of how it can help the end users.
+                    below), play World of Warcraft (guild raid lead of 30
+                    people). I&apos;m happiest working on problems to solve and
+                    thinking of how it can help the end users.
                 </p>
             </div>
         </section>

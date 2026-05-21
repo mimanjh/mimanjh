@@ -8,7 +8,7 @@ const projects: Project[] = [
     {
         title: "UX Insight Generator",
         description:
-            "Turns raw user research notes into structured UX insights, with patterns and themes surfaced automatically.",
+            "Turns a URL or a screenshot of a page into structured UX insights, with patterns and themes surfaced automatically.",
         thumbnail: uxInsightGeneratorThumbnail,
         tech: [
             "React",
@@ -27,16 +27,9 @@ const projects: Project[] = [
     {
         title: "WoW Log Analyzer",
         description:
-            "Parses World of Warcraft combat logs to surface performance metrics and improvement opportunities for raiders.",
+            "Compares World of Warcraft combat logs to top 10 elites and surfaces performance metrics and improvement opportunities for raiders.",
         thumbnail: wowLogAnalyzerThumbnail,
-        tech: [
-            "React",
-            "TypeScript",
-            "Go",
-            "Anthropic",
-            "Redis",
-            "Fly.io",
-        ],
+        tech: ["React", "TypeScript", "Go", "Anthropic", "Redis", "Fly.io"],
         liveUrl: "https://wow-log-analyzer.fly.dev/",
         githubUrl: "https://github.com/mimanjh/wow-log-analyzer",
     },

@@ -7,6 +7,7 @@ import {
     FiMapPin,
 } from "react-icons/fi";
 import ProfileImage from "./ProfileImage";
+import RotatingGreeting from "./RotatingGreeting";
 
 const Hero = () => {
     return (
@@ -16,7 +17,10 @@ const Hero = () => {
                     Software Engineer
                 </p>
                 <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                    Hi, I&apos;m Jacob Hunsaker.
+                    <span className="block">
+                        <RotatingGreeting />,
+                    </span>
+                    I&apos;m Jacob Hunsaker.
                 </h1>
                 <p className="py-5 text-lg opacity-80 max-w-xl">
                     Software engineer who re-architects enterprise platforms and

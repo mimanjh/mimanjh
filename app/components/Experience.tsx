@@ -19,7 +19,7 @@ const roles: Role[] = [
         ],
     },
     {
-        company: "Brigham Young University — Life Sciences IT",
+        company: "Brigham Young University - Life Sciences IT",
         title: "Full-Stack Developer",
         location: "Provo, UT",
         dates: "Sep 2020 – Apr 2022",
