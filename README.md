@@ -20,9 +20,3 @@ Open [http://localhost:3000](http://localhost:3000) to view the site.
 - `npm run start` — run the production build
 - `npm run lint` — lint the project
 
-## Links
-
-- LeetCode solutions: <https://mimanjh-leetcode.vercel.app/>
-- WoW Guild Monitor: <https://github.com/mimanjh/wow-guild-monitor>
-- UX Insight Generator: <https://github.com/mimanjh/ux-insight-generator>
-- WoW Log Analyzer: <https://github.com/mimanjh/wow-log-analyzer>
