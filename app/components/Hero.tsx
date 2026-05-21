@@ -13,10 +13,10 @@ const Hero = () => {
                     Hi, I&apos;m Jacob Hunsaker.
                 </h1>
                 <p className="py-5 text-lg opacity-80 max-w-xl">
-                    Full-stack engineer who re-architects enterprise platforms
-                    and ships AI-driven tooling. Most recently at General
-                    Motors &mdash; now looking for my next role at the
-                    intersection of software and applied AI.
+                    Software engineer who re-architects enterprise platforms and
+                    ships AI-driven tooling. Most recently at General Motors;
+                    now looking for my next role at the intersection of software
+                    and applied AI.
                 </p>
                 <div className="flex items-center gap-2 justify-center md:justify-start text-sm opacity-70 mb-5">
                     <FiMapPin size={14} />
