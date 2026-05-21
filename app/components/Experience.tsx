@@ -45,7 +45,10 @@ const Experience = () => {
     return (
         <section id="experience" className="py-16 scroll-mt-20">
             <h2 className="text-3xl font-bold mb-2">Experience</h2>
-            <p className="opacity-70 mb-8">Where I&apos;ve worked.</p>
+            <p className="opacity-70 mb-8">
+                Where I&apos;ve worked. Refer to my resume for more technical
+                details.
+            </p>
             <ol className="relative border-l border-base-300 ml-2 space-y-10">
                 {roles.map((role) => (
                     <li key={role.company} className="pl-6">
