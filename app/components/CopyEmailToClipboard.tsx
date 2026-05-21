@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { FiCopy, FiCheck } from "react-icons/fi";
 import Alert from "./Alert";
 
 const EMAIL = "jacobjhunsaker@gmail.com";
@@ -31,10 +32,12 @@ const CopyEmailToClipboard = () => {
     return (
         <>
             <button
-                className="btn bg-accent-content join-item"
                 onClick={copyEmailToClipboard}
+                aria-label="Copy email to clipboard"
+                title="Copy email"
+                className="btn btn-ghost btn-circle"
             >
-                Email
+                {isCopied ? <FiCheck size={22} /> : <FiCopy size={22} />}
             </button>
             {isCopied && (
                 <Alert text="Email copied to clipboard." success={true} />

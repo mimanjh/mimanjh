@@ -3,94 +3,91 @@
  * Navigation formatting from Lee Robinson: https://github.com/leerob/leerob.io
  */
 import clsx from "clsx";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { LayoutGroup, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-const navItems = {
-    "/": {
-        name: "home",
-        external: false,
-    },
-    "https://mimanjh-leetcode.vercel.app/": {
-        name: "leetcode",
-        external: true,
-    },
-    "https://mimanjh.github.io/robofriends/": {
-        name: "robofriends",
-        external: true,
-    },
-    "https://github.com/mimanjh/wow-guild-monitor": {
-        name: "wow-guild-monitor",
-        external: true,
-    },
-};
+const sections = [
+    { id: "home", label: "home" },
+    { id: "about", label: "about" },
+    { id: "skills", label: "skills" },
+    { id: "projects", label: "projects" },
+    { id: "contact", label: "contact" },
+];
 
 export default function TopNav() {
-    let pathname = usePathname() || "/";
+    const [active, setActive] = useState("home");
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const visible = entries
+                    .filter((e) => e.isIntersecting)
+                    .sort(
+                        (a, b) =>
+                            b.intersectionRatio - a.intersectionRatio
+                    )[0];
+                if (visible) setActive(visible.target.id);
+            },
+            { rootMargin: "-40% 0px -50% 0px", threshold: [0, 0.25, 0.5, 1] }
+        );
+        sections.forEach(({ id }) => {
+            const el = document.getElementById(id);
+            if (el) observer.observe(el);
+        });
+        return () => observer.disconnect();
+    }, []);
+
     return (
-        <aside className="ml-14 mb-5 tracking-tight">
-            <div className="lg:sticky lg:top-20">
-                <LayoutGroup>
-                    <nav
-                        className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
-                        id="nav"
+        <aside className="mb-5 tracking-tight sticky top-0 z-30 bg-base-100/80 backdrop-blur supports-[backdrop-filter]:bg-base-100/60">
+            <LayoutGroup>
+                <nav
+                    className="flex flex-row items-center justify-between px-4 py-3 max-w-7xl mx-auto"
+                    id="nav"
+                >
+                    <Link
+                        href="#home"
+                        className="font-semibold tracking-tight"
                     >
-                        <div className="flex flex-row space-x-0 pr-10">
-                            {Object.entries(navItems).map(
-                                ([path, { name, external }]) => {
-                                    if (external) {
-                                        return (
-                                            <a
-                                                key={path}
-                                                href={path}
-                                                className={clsx(
-                                                    "transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle"
-                                                )}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                <span className="relative py-1 px-2">
-                                                    {name}
-                                                </span>
-                                            </a>
-                                        );
-                                    }
-                                    const isActive = path === pathname;
-                                    return (
-                                        <Link
-                                            key={path}
-                                            href={path}
-                                            className={clsx(
-                                                "transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle",
-                                                {
-                                                    "text-neutral-500":
-                                                        !isActive,
-                                                }
+                        jacob hunsaker
+                    </Link>
+                    <div className="flex flex-row gap-1">
+                        {sections
+                            .filter((s) => s.id !== "home")
+                            .map(({ id, label }) => {
+                                const isActive = id === active;
+                                return (
+                                    <Link
+                                        key={id}
+                                        href={`#${id}`}
+                                        className={clsx(
+                                            "transition-all hover:text-base-content flex align-middle text-sm",
+                                            {
+                                                "text-base-content/60":
+                                                    !isActive,
+                                            }
+                                        )}
+                                    >
+                                        <span className="relative py-1 px-2">
+                                            {label}
+                                            {isActive && (
+                                                <motion.div
+                                                    className="absolute h-[2px] -bottom-0.5 inset-x-2 bg-primary"
+                                                    layoutId="nav-active"
+                                                    transition={{
+                                                        type: "spring",
+                                                        stiffness: 350,
+                                                        damping: 30,
+                                                    }}
+                                                />
                                             )}
-                                        >
-                                            <span className="relative py-1 px-2">
-                                                {name}
-                                                {path === pathname ? (
-                                                    <motion.div
-                                                        className="absolute h-[1px] top-7 mx-2 inset-0 bg-neutral-200 dark:bg-neutral-800 z-[-1] dark:bg-gradient-to-r from-transparent to-neutral-900"
-                                                        layoutId="sidebar"
-                                                        transition={{
-                                                            type: "spring",
-                                                            stiffness: 350,
-                                                            damping: 30,
-                                                        }}
-                                                    />
-                                                ) : null}
-                                            </span>
-                                        </Link>
-                                    );
-                                }
-                            )}
-                        </div>
-                    </nav>
-                </LayoutGroup>
-            </div>
+                                        </span>
+                                    </Link>
+                                );
+                            })}
+                    </div>
+                </nav>
+            </LayoutGroup>
         </aside>
     );
 }

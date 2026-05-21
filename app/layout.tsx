@@ -6,7 +6,7 @@ import TopNav from "./components/TopNav";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: { default: "Mimanjh", template: "%s | Mimanjh" },
+    title: { default: "Jacob Hunsaker", template: "%s | Jacob Hunsaker" },
     description: "Full Stack Developer",
 };
 
@@ -17,13 +17,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" data-theme="business">
-            <body className="antialiased">
-                <div className="max-w-7xl mx-auto mb-40 flex flex-col md:flex-row mt-8 lg:mx-auto">
-                    <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
-                        <TopNav />
-                        {children}
-                    </main>
-                </div>
+            <body className={`${inter.className} antialiased`}>
+                <TopNav />
+                <main className="pb-20">{children}</main>
             </body>
         </html>
     );
