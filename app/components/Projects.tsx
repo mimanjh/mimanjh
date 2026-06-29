@@ -1,10 +1,28 @@
 import ProjectCard, { Project } from "./ProjectCard";
+import dongleyThumbnail from "../../public/thumbnail-dongley.png";
 import leetCodeThumbnail from "../../public/thumbnail-leetcode.png";
 import wowGuildMonitorThumbnail from "../../public/thumbnail-wowguildmonitor.png";
 import uxInsightGeneratorThumbnail from "../../public/thumbnail-uxinsightgenerator.png";
 import wowLogAnalyzerThumbnail from "../../public/thumbnail-wowloganalyzer.png";
 
 const projects: Project[] = [
+    {
+        title: "Dongley",
+        description:
+            "Helps introverts and new-in-town folks find low-pressure, in-person activities to join with people nearby. Post a plan, get matched, tap in, meet up.",
+        thumbnail: dongleyThumbnail,
+        tech: [
+            "React Native",
+            "Supabase",
+            "Mapbox",
+            "Twilio",
+            "Sentry",
+            "PostHog",
+            "Redis",
+            "Brevo",
+        ],
+        liveUrl: "https://www.dongley.app",
+    },
     {
         title: "UX Insight Generator",
         description:
