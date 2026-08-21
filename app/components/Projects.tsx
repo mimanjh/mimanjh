@@ -4,6 +4,7 @@ import leetCodeThumbnail from "../../public/thumbnail-leetcode.png";
 import wowGuildMonitorThumbnail from "../../public/thumbnail-wowguildmonitor.png";
 import uxInsightGeneratorThumbnail from "../../public/thumbnail-uxinsightgenerator.png";
 import wowLogAnalyzerThumbnail from "../../public/thumbnail-wowloganalyzer.png";
+import donMoaThumbnail from "../../public/thumbnail-donmoa.jpg";
 
 const projects: Project[] = [
     {
@@ -50,6 +51,19 @@ const projects: Project[] = [
         tech: ["React", "TypeScript", "Go", "Anthropic", "Redis", "Fly.io"],
         liveUrl: "https://wow-log-analyzer.fly.dev/",
         githubUrl: "https://github.com/mimanjh/wow-log-analyzer",
+    },
+    {
+        title: "DonMoa",
+        description:
+            "An affordable personal finance app for tracking accounts, budgets, and spending. Users connect SimpleFIN Bridge manually, while Supabase securely stores the connection for server-side syncing.",
+        thumbnail: donMoaThumbnail,
+        tech: [
+            "React Native",
+            "Expo",
+            "TypeScript",
+            "Supabase",
+            "SimpleFIN Bridge",
+        ],
     },
     {
         title: "LeetCode Solutions",
