@@ -40,7 +40,7 @@ const projects: Project[] = [
             "Redis",
             "Fly.io",
         ],
-        liveUrl: "https://ux-insight-generator.fly.dev/",
+        liveUrl: "https://ux.jacobhunsaker.me",
         githubUrl: "https://github.com/mimanjh/ux-insight-generator",
     },
     {
